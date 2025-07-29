@@ -1,0 +1,275 @@
+/* Services Overview */
+.services-overview {
+    padding: 80px 0;
+    background: #f7fafc;
+}
+
+/* Service Sections */
+.service-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.service-section.alt-section {
+    background: #f7fafc;
+}
+
+.service-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.service-content.reverse {
+    direction: rtl;
+}
+
+.service-content.reverse > * {
+    direction: ltr;
+}
+
+.service-text h2 {
+    color: #1a365d;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+}
+
+.service-intro {
+    font-size: 1.25rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.service-features h3 {
+    color: #1a365d;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.service-features ul {
+    list-style: none;
+    margin-bottom: 35px;
+}
+
+.service-features li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #2b6cb0;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.service-features strong {
+    color: #1a365d;
+}
+
+.service-benefits h3 {
+    color: #1a365d;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.benefit-item {
+    padding: 20px;
+    background: #f7fafc;
+    border-radius: 8px;
+    border-left: 4px solid #2b6cb0;
+}
+
+.benefit-item strong {
+    display: block;
+    color: #1a365d;
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+}
+
+.benefit-item p {
+    color: #718096;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.service-image {
+    text-align: center;
+}
+
+.service-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Why Choose Us */
+.why-choose-us {
+    padding: 100px 0;
+    background: white;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.reason-item {
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.reason-item:hover {
+    background: #f7fafc;
+    border-color: #2b6cb0;
+    transform: translateY(-5px);
+}
+
+.reason-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(43, 108, 176, 0.15);
+}
+
+.reason-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reason-item h3 {
+    color: #1a365d;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.reason-item p {
+    color: #718096;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+    text-align: center;
+    color: white;
+}
+
+.cta-content h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .service-content {
+        gap: 60px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .service-content.reverse {
+        direction: ltr;
+    }
+
+    .service-text h2 {
+        font-size: 2rem;
+    }
+
+    .service-intro {
+        font-size: 1.125rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .service-features li {
+        padding-left: 20px;
+        font-size: 0.95rem;
+    }
+
+    .benefit-item {
+        padding: 15px;
+    }
+
+    .reason-item {
+        padding: 30px 20px;
+    }
+}

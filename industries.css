@@ -1,0 +1,271 @@
+/* Industries Overview */
+.industries-overview {
+    padding: 80px 0;
+    background: #f7fafc;
+}
+
+/* Industry Sections */
+.industry-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.industry-section.alt-section {
+    background: #f7fafc;
+}
+
+.industry-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.industry-content.reverse {
+    direction: rtl;
+}
+
+.industry-content.reverse > * {
+    direction: ltr;
+}
+
+.industry-text h2 {
+    color: #1a365d;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+}
+
+.industry-intro {
+    font-size: 1.25rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.industry-challenges h3,
+.industry-solutions h3 {
+    color: #1a365d;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.industry-challenges ul {
+    list-style: none;
+    margin-bottom: 35px;
+}
+
+.industry-challenges li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.industry-challenges li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #e53e3e;
+    font-size: 0.9rem;
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.solution-item {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #2b6cb0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.alt-section .solution-item {
+    background: white;
+}
+
+.solution-item strong {
+    display: block;
+    color: #1a365d;
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+}
+
+.solution-item p {
+    color: #718096;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.industry-image {
+    text-align: center;
+}
+
+.industry-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.industry-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Industry Success Metrics */
+.industry-metrics {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #2b6cb0 0%, #3182ce 100%);
+    color: white;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.metric-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.metric-number {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.metric-label {
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.metric-industry {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+    text-align: center;
+    color: white;
+}
+
+.cta-content h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .industry-content {
+        gap: 60px;
+    }
+
+    .solutions-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .industry-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .industry-content.reverse {
+        direction: ltr;
+    }
+
+    .industry-text h2 {
+        font-size: 2rem;
+    }
+
+    .industry-intro {
+        font-size: 1.125rem;
+    }
+
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .metric-number {
+        font-size: 2.5rem;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .industry-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .industry-challenges li {
+        padding-left: 20px;
+        font-size: 0.95rem;
+    }
+
+    .solution-item {
+        padding: 15px;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metric-number {
+        font-size: 2rem;
+    }
+
+    .metric-item {
+        padding: 25px 15px;
+    }
+}
